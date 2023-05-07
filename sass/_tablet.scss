@@ -1,0 +1,326 @@
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    header{
+        padding-top: 0;
+        width: 100vw;
+        overflow-x: hidden;
+
+        .nav-container{
+            padding-right: 2rem;
+
+            .logo{
+                img{
+                    height: 48px;
+                }
+            }
+    
+            nav{
+                display: none;
+            }
+        }
+    }
+
+    .hero, .products-hero, .about-hero, .news-hero, .contact-hero{
+        min-height: 450px;
+    
+        .content{
+            padding-top: 8rem;
+            
+    
+            h2{
+                font-size: 3rem;
+            }
+        }
+    }
+    
+    .products, .mfg{
+        flex-direction: column;
+    
+        .products-left, .mfg-left{
+            width: 100%;
+            padding: 6rem 4rem 4rem 4rem;
+        }
+    
+        .products-right, .mfg-right{
+            width: 100%;
+        }
+    }
+    
+    .about{
+        flex-direction: column;
+    
+        .about-left{
+            width: 100%;
+            padding: 8rem 4rem 4rem 4rem;
+        }
+    
+        .about-right{
+            width: 100%;
+            padding: 0rem 0 4rem 4rem;
+        }
+    }
+    
+    .news{
+        padding: 4rem 0;
+
+    
+        .container{
+            width: 90vw;
+    
+            .box{
+                border: 1px solid white;
+                width: 30%;
+    
+                .imgDiv{
+                    width: 100%;
+                    height: 200px;
+                }
+    
+                .txt{
+                    padding: 1rem;
+    
+                    p{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    
+    }
+
+    footer{
+        padding: 4rem 0 1rem 0;
+    
+        .inner-container{
+            width: 96vw;
+    
+            .box{
+                max-width: 200px;
+                img{
+                    height: 79px;
+                }
+    
+                #companyName{
+                    font-size: .8rem;
+                    line-height: 1.8rem;
+                }
+                p{
+                    font-size: .6rem;
+                }
+    
+                h6{
+                    font-size: 1rem;
+                    margin-bottom: .4rem;
+                }
+    
+                a{
+                    font-size: .6rem;
+                }
+            }
+        }
+    
+    }
+    
+    .products-list{
+        background: #f2f2f2;
+        padding: 3rem 0;
+    
+        .container{
+            flex-wrap: wrap;
+            width: 90vw;
+    
+            .box{
+    
+                p{
+                    margin-top: 1rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+
+    .about-more{
+        padding: 3rem 0; 
+    
+        .abt-container{
+            width: 90vw;
+        }
+    
+        
+        #lower{
+            width: 90vw;
+        }
+    }
+
+    .news-more{
+        background: #f2f2f2;
+        padding: 3rem 0; 
+    
+        .container{
+            width: 90vw;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    
+    
+    }
+
+    .info{
+        display: flex;
+    
+        .one{
+            padding: 2rem;
+            width: 33.333333%;
+        }
+    
+        .two{
+            padding: 2rem;
+            width: 33.333333%;
+    
+            .content{
+                i{
+                    left: 1.8rem;
+                }
+            }
+        }
+    
+        .three{
+            padding: 2rem;
+            width: 33.333%;
+
+            i{
+                left: 5rem;
+            }
+    
+                
+            p{
+                font-family: $open;
+                margin-top: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .map2{
+    
+        .location{
+    
+            i{
+                left: 6rem;
+            }
+    
+        }
+    
+    }
+
+    .ug-hero{
+        min-height: 450px;
+        padding-top: 10rem; 
+    
+        h2{
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    
+        hr{
+            width: 100px;
+        }
+    }
+    
+    .ug-about{
+        padding: 3rem 0;
+    
+        .inner-container{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            width: 80vw;
+            margin: 0 auto;
+    
+            .imgDiv{
+                width: 80%;
+                margin-top: 3rem;
+            }
+    
+            .txtDiv{
+                width: 100%;
+    
+                h3{
+                    margin-top: .6rem;
+                }
+    
+                hr{
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .ug-contacts{
+        padding: 3rem 0;
+        background: white;
+    
+        h3{
+            text-align: center;
+            font-size: 2rem;
+            font-family: $robo;
+        }
+    
+        hr{
+            width: 200px;
+        }
+    
+        .inner-section{
+            width: 86vw;
+    
+            .factory, .office{
+                background: #f4f4f4;
+                padding: 2rem 1rem 1rem 1rem;
+                width: 48%;
+
+                iframe{
+                    height: 300px;
+                }
+            }
+    
+    
+        }
+    }
+
+    .details-hero{
+        min-height: 150px; 
+    }
+    
+    .details-more{
+        background: #f2f2f2;
+        padding: 3rem 0; 
+    
+        .container{
+            width: 90vw;
+        }
+    }
+    
+    .post{
+        padding: 4rem 0;
+    
+        .post-container{
+            width: 80vw;
+            padding: 3rem;
+        }
+    
+        .mini-nav{
+            width: 80vw;
+        }
+    
+        .related{
+            width: 80vw;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem;
+        }
+    }
+
+    #toWhatsapp{
+        width: 50px;
+        height: 50px;
+    }
+}

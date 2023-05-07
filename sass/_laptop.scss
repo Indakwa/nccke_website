@@ -1,0 +1,133 @@
+@media only screen and (min-width: 901px) and (max-width: 1400px){
+    header{
+    
+        .nav-container{
+    
+            .logo{
+                img{
+                    max-height: 46px;
+                }
+            }
+        
+            
+            nav{
+                width: 80%;
+            }
+        }
+    }
+
+    .products, .mfg{
+        position: relative;
+        width: 100vw;
+        display: flex;
+    
+        .products-left, .mfg-left{
+            width: 50%;
+            background: #e0e0e0;
+            padding: 4rem 2rem;
+
+            h3{
+                line-height: 3rem;
+                margin: 1rem 0;
+            }
+        }
+    
+        .products-right, .mfg-right{
+    
+            .imgDiv{
+                height: 100%;
+            }
+        }
+    }
+
+    .news{
+
+        .container{
+            width: 80vw;
+        }
+    }
+
+    footer{
+        background: #0b0d17;
+        padding: 4rem 0 1rem 0;
+    
+        .inner-container{
+            width: 90vw;
+    
+            .box{
+                max-width: 200px;
+            }
+        }
+    }
+
+    .products-list{
+        .container{
+            width: 80vw;
+        }
+    }
+
+    .about-more{
+        .abt-container{
+            width: 80vw;
+        }
+
+        #lower{
+            width: 80vw;
+        }
+    }
+
+    .news-more{
+        padding: 4rem 2rem; 
+
+        .container{
+            width: 90vw;
+            gap: 1.5rem;
+        }
+    }
+
+    .ug-about{
+        padding: 4rem;
+    
+        .inner-container{
+            width: 80vw;
+            .txtDiv{
+    
+                h3{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1500px){
+    header{ 
+    
+        .nav-container{
+            padding-left: 158px;
+            padding-right: 158px;
+    
+            .logo{
+                img{
+                    max-height: 46px;
+                }
+            }
+        
+            
+            nav{
+                width: 80%;
+            }
+        }
+    }
+
+    .products, .mfg{
+    
+        .products-right, .mfg-right{
+    
+            .imgDiv{
+                height: 100%;
+            }
+        }
+    }
+}

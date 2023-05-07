@@ -1,0 +1,179 @@
+@import 'config';
+
+
+header{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+    padding-top: 0rem;
+    z-index: 99;
+
+    .nav-container {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding-left: 178px;
+        padding-right: 178px;
+        background-color: $blue;
+    
+        @media (max-width: 1024px) {
+            padding-left: 34px;
+            padding-right: 0px;
+        }
+    
+        @media (max-width: 767px) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+	}
+
+
+    .nav-container{
+
+        .logo{
+            img{
+                max-height: 66px;
+            }
+        }
+    
+        
+        nav{
+            width: 60%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-left: -86px;
+    
+    
+            ul{
+                li{
+                    display: inline-block;
+                    list-style-type: none;
+                    margin-left: 1rem;
+    
+                    a{
+                        padding: 1rem;
+                        text-decoration: none;
+                        color: white;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0);
+                        font-family: $osw;
+                        font-size: 1rem;
+                        transition: .5s ease;
+    
+                        &:hover{
+                            color: #ccc;
+                            border-bottom: 2px solid #ccc;
+                        }
+
+                        &:active{
+                            border-bottom: 2px solid white;
+                        }
+                    }
+
+                    .active{
+                        border-bottom: 2px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import 'nav';
+@import 'home';
+
+
+footer{
+    background: #0b0d17;
+    padding: 4rem 0 1rem 0;
+
+    .inner-container{
+        width: 70vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .box{
+            max-width: 270px;
+            img{
+                display: inline-block;
+                height: 99px;
+            }
+
+            #companyName{
+                font-family: $robo;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            p{
+                font-family: $open;
+                color: white;
+                font-size: .8rem;
+            }
+
+            h6{
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                font-family: $osw;
+                color: white;
+                margin-bottom: .4rem;
+            }
+
+            a{
+                font-family: $open;
+                font-size: .8rem;
+                color: white;
+                display: block;
+                margin-bottom: 1rem;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #copy{
+        color: white;
+        text-align: center;
+        font-family: $open;
+        font-size: .7rem;
+        margin-top: 3rem;
+    }
+}
+
+#toWhatsapp{
+    position: fixed;
+    z-index: 5;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .5s ease;
+    .imgDiv{
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &:hover{
+        transform: scale(1.1)
+    }
+}
+
+@import 'pages';
+@import 'tablet';
+@import 'laptop';
+@import 'mobile';
