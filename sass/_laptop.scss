@@ -18,6 +18,20 @@
 
     .offer{
     
+        .discount{
+            top: 0rem;
+            left: 0rem;
+            color: red;
+            border: 8px solid red;
+            transform: scale(.6);
+        
+            p{
+                top: -.4rem;
+                font-size: 1.5rem;
+                transform: rotate(-10deg);
+            }
+        }
+
         .offer-title{
             font-size: 1.6rem;
         }
@@ -150,6 +164,21 @@
 
     .offer{
     
+        
+        .discount{
+            top: 1rem;
+            left: 1rem;
+            color: red;
+            border: 8px solid red;
+            transform: scale(.8);
+        
+            p{
+                top: -.4rem;
+                font-size: 1.5rem;
+                transform: rotate(-10deg);
+            }
+        }
+
         .offer-title{
             font-size: 2rem;
         }
