@@ -19,6 +19,41 @@
         }
     }
 
+    .offer{
+    
+        .offer-title{
+            font-size: 1rem;
+        }
+    
+        #countdown {
+            width: 90vw;
+            padding: 2rem 4rem;
+          }
+          
+          #timer {
+
+            div{
+                width: 130px;
+    
+                .times{
+                    font-size: 3rem;
+                }
+                .labels{
+                    font-size: 1.2rem;
+                }
+            }
+          }
+          
+    }
+
+    .paybill{
+    
+        .bill-container{
+            width: 80vw;
+        }
+    }
+    
+
     .hero, .products-hero, .about-hero, .news-hero, .contact-hero{
         min-height: 450px;
     

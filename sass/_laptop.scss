@@ -16,6 +16,33 @@
         }
     }
 
+    .offer{
+    
+        .offer-title{
+            font-size: 1.6rem;
+        }
+    
+        #countdown {
+            width: 90vw;
+            padding: 4rem 4rem;
+          }
+          
+          #timer {
+
+            div{
+                width: 150px;
+    
+                .times{
+                    font-size: 3rem;
+                }
+                .labels{
+                    font-size: 1.6rem;
+                }
+            }
+          }
+          
+    }
+
     .products, .mfg{
         position: relative;
         width: 100vw;
@@ -119,6 +146,33 @@
                 width: 80%;
             }
         }
+    }
+
+    .offer{
+    
+        .offer-title{
+            font-size: 2rem;
+        }
+    
+        #countdown {
+            width: 80vw;
+            padding: 4rem 4rem;
+          }
+          
+          #timer {
+
+            div{
+                width: 200px;
+    
+                .times{
+                    font-size: 4rem;
+                }
+                .labels{
+                    font-size: 2rem;
+                }
+            }
+          }
+     
     }
 
     .products, .mfg{

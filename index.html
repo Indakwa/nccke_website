@@ -50,6 +50,40 @@
         <div class="overlay"></div>
     </section>
 
+    <section class="offer">
+        <h3 class="offer-title">NEW MONTH OFFER ENDS IN</h3>
+        <div id="countdown">
+            <div id="timer">
+              <div>
+                <span id="days" class="times">11</span>
+                <span class="labels">Days</span>
+              </div>
+              <div>
+                <span id="hours" class="times">00</span>
+                <span class="labels">Hours</span>
+              </div>
+              <div>
+                <span id="minutes" class="times">00</span>
+                <span class="labels">Minutes</span>
+              </div>
+              <div>
+                <span id="seconds" class="times">00</span>
+                <span class="labels">Seconds</span>
+            </div>
+            </div>
+          </div>          
+    </section>
+
+    <section class="paybill">
+        <div class="bill-container">
+            <div class="imgDiv">
+                <img src="images/mpesa.png" alt="">
+            </div>
+            <p id="paybill">PAYBILL: 329329</p>
+            <p id="account">ACCOUNT NUMBER: 0100438301900</p>
+        </div>
+    </section>
+
     <section class="products">
         <div class="products-left">
             <h6>WHAT WE DO</h6>
@@ -245,6 +279,45 @@
             location.href = "pages/news2.html"
         });
         });
+
+            // Set the offer end date and time in UTC format
+    const offerEnd = new Date(Date.UTC(2023, 4, 20, 23, 59, 59));
+
+    // Get the HTML elements for the timer display
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    // Update the countdown every second
+    const countdown = setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+    // Get the current date and time in UTC format
+    const now = new Date();
+
+    // Calculate the remaining time in milliseconds
+    const remainingTime = offerEnd - now;
+
+    // If the offer has ended, stop the countdown
+    if (remainingTime < 0) {
+        clearInterval(countdown);
+        return;
+    }
+
+    // Calculate the remaining time in days, hours, minutes, and seconds
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    // Update the timer display with the remaining time
+    daysEl.textContent = days.toString().padStart(2, "0");
+    hoursEl.textContent = hours.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
+    }
+
     </script>
     <script src="js/main.js"></script>
 
