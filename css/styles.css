@@ -83,7 +83,9 @@ header .nav-container nav ul li .active {
   display: block;
   width: 35px;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   outline: none;
   border: none;
@@ -303,7 +305,8 @@ header .nav-container nav ul li .active {
 .paybill .bill-container .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .paybill .bill-container #paybill {
   margin-top: -4rem;
@@ -370,7 +373,8 @@ header .nav-container nav ul li .active {
 .products .products-right .imgDiv img, .products .mfg-right .imgDiv img, .mfg .products-right .imgDiv img, .mfg .mfg-right .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .products .products-right .overlay, .products .mfg-right .overlay, .mfg .products-right .overlay, .mfg .mfg-right .overlay {
   width: 100%;
@@ -495,7 +499,8 @@ header .nav-container nav ul li .active {
 .news .container .box .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .news .container .box .txt {
   padding: 1rem;
@@ -596,7 +601,8 @@ footer #copy {
 #toWhatsapp .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #toWhatsapp:hover {
   transform: scale(1.1);
@@ -653,26 +659,73 @@ footer #copy {
   padding: 2rem;
   transition: 0.5s ease;
 }
-.products-list .container .box .imgDiv {
+.products-list .container .box .upperDiv .imgDiv {
   width: 100%;
   height: 300px;
 }
-.products-list .container .box .imgDiv img {
+.products-list .container .box .upperDiv .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-.products-list .container .box p {
+.products-list .container .box .upperDiv p {
   font-family: "Roboto", sans-serif;
   text-align: center;
   margin-top: 0.5rem;
 }
-.products-list .container .box .p_name {
+.products-list .container .box .upperDiv .p_name {
   margin-top: 1.8rem;
 }
-.products-list .container .box:hover {
+.products-list .container .box .lowerDiv {
+  margin-top: 2rem;
+}
+.products-list .container .box .lowerDiv h6 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.products-list .container .box .lowerDiv .inner {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products-list .container .box .lowerDiv .inner button {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+.products-list .container .box .lowerDiv .inner button:hover {
   cursor: pointer;
-  transform: scale(1.02);
+}
+.products-list .container .box .lowerDiv .inner input {
+  display: block;
+  text-align: center;
+  width: 60px;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  height: 50px;
+}
+.products-list .container .box .lowerDiv #buyBtn {
+  border: none;
+  outline: none;
+  display: block;
+  width: 60%;
+  min-width: 150px;
+  background: rgba(255, 0, 0, 0.802);
+  color: white;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5rem;
+  transition: 0.5s ease;
+}
+.products-list .container .box .lowerDiv #buyBtn:hover {
+  cursor: pointer;
 }
 
 .about-hero {
@@ -771,7 +824,8 @@ footer #copy {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
@@ -842,7 +896,8 @@ footer #copy {
 .news-more .container .box .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .news-more .container .box .txt {
   padding: 1rem 0;
@@ -1011,7 +1066,8 @@ footer #copy {
 .form-section .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .map2 {
@@ -1099,7 +1155,8 @@ footer #copy {
 .ug-about .inner-container .imgDiv img {
   height: auto;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .ug-about .inner-container .txtDiv {
   width: 50%;
@@ -1288,7 +1345,8 @@ footer #copy {
 .details-more .container .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .post {
@@ -1353,11 +1411,89 @@ footer #copy {
 .post .related .inner-section .box .imgDiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .post .related .inner-section .box p {
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
+}
+
+.selected {
+  display: flex;
+}
+.selected .order-container {
+  width: 50%;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.0549019608);
+}
+.selected .order-container .order {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+.selected .order-container .order h3 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.selected .order-container .order .product, .selected .order-container .order .price, .selected .order-container .order .quantity, .selected .order-container .order .total {
+  display: flex;
+  margin-top: 0.8rem;
+}
+.selected .order-container .order .product .left, .selected .order-container .order .price .left, .selected .order-container .order .quantity .left, .selected .order-container .order .total .left {
+  border: 2px solid rgba(0, 0, 0, 0.646);
+  width: 40%;
+  border-right: none;
+  padding: 0.5rem 1rem;
+}
+.selected .order-container .order .product .left p, .selected .order-container .order .price .left p, .selected .order-container .order .quantity .left p, .selected .order-container .order .total .left p {
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+.selected .order-container .order .product .right, .selected .order-container .order .price .right, .selected .order-container .order .quantity .right, .selected .order-container .order .total .right {
+  border: 2px solid rgba(0, 0, 0, 0.646);
+  width: 60%;
+  padding: 0.5rem 1rem;
+}
+.selected .order-container .order .product .right p, .selected .order-container .order .price .right p, .selected .order-container .order .quantity .right p, .selected .order-container .order .total .right p {
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+.selected .details {
+  width: 50%;
+}
+.selected .details form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.selected .details form h5 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.selected .details form input {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.selected .details form #submit {
+  width: 60%;
+  background: #2f3476;
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+}
+.selected .details form #submit:hover {
+  transform: scale(0.98);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -2174,7 +2310,8 @@ footer #copy {
   .form-section .imgDiv img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .map2 {
     flex-direction: column;
@@ -2428,4 +2565,4 @@ footer #copy {
     width: 60px;
     height: 60px;
   }
-}
+}/*# sourceMappingURL=styles.css.map */

@@ -52,29 +52,87 @@
             padding: 2rem;
             transition: .5s ease;
 
-            .imgDiv{
-                width: 100%;
-                height: 300px;
-                img{
+            .upperDiv{
+                
+                .imgDiv{
                     width: 100%;
-                    height: 100%;
-                    object-fit: contain;
+                    height: 300px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+    
+                p{
+                    font-family: $robo;
+                    text-align: center;
+                    margin-top: .5rem;
+                }
+                .p_name{
+                    margin-top: 1.8rem;
                 }
             }
 
-            p{
-                font-family: $robo;
-                text-align: center;
-                margin-top: .5rem;
-            }
-            .p_name{
-                margin-top: 1.8rem;
+            .lowerDiv{
+                margin-top: 2rem;
+
+                h6{
+                    font-family: $open;
+                    text-align: center;
+                    font-size: .8rem;
+                    margin-bottom: .5rem;
+                }
+
+                .inner{
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button{
+                        display: block;
+                        font-family: $robo;
+                        padding: .5rem 1rem;
+                        font-size: 1.5rem;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    input{
+                        display: block;
+                        text-align: center;
+                        width: 60px;
+                        font-size: 1.2rem;
+                        font-family: $robo;
+                        height: 50px;
+                    }
+
+                }
+
+                #buyBtn{
+                    border: none;
+                    outline: none;
+                    display: block;
+                    width: 60%;
+                    min-width: 150px;
+                    background: rgba(255, 0, 0, 0.802);
+                    color: white;
+                    margin: 0 auto;
+                    margin-top: 2rem;
+                    font-size: 1.3rem;
+                    font-family: $robo;
+                    padding: .5rem;
+                    transition: .5s ease;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
             }
 
-            &:hover{
-                cursor: pointer;
-                transform: scale(1.02);
-            }
+
         }
     }
 }
@@ -839,4 +897,97 @@
             }
         }
     }
+}
+
+.selected{
+    display: flex;
+
+    .order-container{
+        width: 50%;
+        padding: .5rem;   
+        background: #0000000e; 
+
+        .order{
+            width: 90%;
+            margin: 0 auto;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 3rem;
+
+            h3{
+                text-align: center;
+                font-family: $open;
+            }
+
+            .product, .price, .quantity, .total{
+                display: flex;
+                margin-top: .8rem;
+                
+                .left{
+                    border: 2px solid rgba(0, 0, 0, 0.646);
+                    width: 40%;
+                    border-right: none;
+                    padding: .5rem 1rem;
+
+                    p{
+                        font-size: 1.3rem;
+                        font-family: $open;
+                    }
+                }
+
+                .right{
+                    border: 2px solid rgba(0, 0, 0, 0.646);
+                    width: 60%;
+                    padding: .5rem 1rem;
+
+                    p{
+                        font-size: 1.3rem;
+                        font-family: $open;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .details{
+        width: 50%;
+
+        form{
+            width: 80%;
+            margin: 0 auto;
+            padding: 4rem 0;
+
+            h5{
+                font-family: $open;
+                text-align: center;
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            input{
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                font-size: 1.2rem;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            #submit{
+                width: 60%;
+                background: $blue;
+                color: white;
+                text-transform: uppercase;
+                outline: none;
+                border: none;
+
+                &:hover{
+                    transform: scale(.98);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
 }
