@@ -824,6 +824,86 @@
         width: 60px;
         height: 60px;
     }
+
+    .selected{
+        display: flex;
+        flex-direction: column;
+    
+        .order-container{
+            width: 100%;
+            padding: .8rem;  
+            padding-bottom: 2.5rem; 
+            background: #0000000e; 
+    
+            .order{
+                width: 98%;
+                margin: 0 auto;
+                padding: 0rem;
+                border-radius: 5px;
+                margin-top: 1rem;
+    
+                h3{
+                    text-align: center;
+                    font-family: $open;
+                }
+    
+                .product, .price, .quantity, .total{
+                    display: flex;
+                    margin-top: .6rem;
+                    
+                    .left{
+                        border: 2px solid rgba(0, 0, 0, 0.646);
+                        width: 40%;
+                        border-right: none;
+                        padding: .5rem 1rem;
+    
+                        p{
+                            font-size: 1rem;
+                            font-family: $open;
+                        }
+                    }
+    
+                    .right{
+                        width: 60%;
+                        padding: .5rem 1rem;
+    
+                        p{
+                            font-size: 1rem;
+                            font-family: $open;
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+        .details{
+            width: 100%;
+    
+            form{
+                width: 95%;
+                padding: 4rem 0;
+    
+                h5{
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+    
+                input{
+                    width: 96%;
+                    font-size: 1rem;
+                    padding: .5rem;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+    
+                #submit{
+                    margin-top: 2rem;
+                }
+            }
+        }
+    
+    }
     
     
 }

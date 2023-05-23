@@ -84,14 +84,17 @@
 
         <div class="details">
             <form   
-                action="https://formspree.io/f/myyaaeee"
+                action="https://formspree.io/f/mrgvvpkr"
                 method="POST"
             >
                 <h5>Enter your Details</h5>
-                <input type="text" placeholder="Enter your name">
-                <input type="tel" placeholder="Enter your phone number">
-                <input type="text" placeholder="Enter your Town/City">
-                <input type="submit" id="submit">
+                <input type="text" name="name" required="true" placeholder="Enter your name">
+                <input type="tel" name="phone" required="true" placeholder="Enter your phone number">
+                <input type="text" name="town" required="true" placeholder="Enter your Town/City">
+                <input type="text" style="display: none;" name="product" id="formProduct">
+                <input type="text" style="display: none;" name="quantity" id="formQuantity">
+                <input type="text" style="display: none;" name="total" id="formTotal">
+                <input type="submit" id="submit" onclick="showPaybill()">
             </form>
         </div>
     </div>
@@ -136,13 +139,13 @@
 
             <div class="box">
                 <h6>Contact Us</h6>
-                <a href="mailto:simbacementt@gmail.com">
+                <a href="mailto:simbacement.co.ke@gmail.com">
                     <i class="fa-solid fa-envelope"></i>
-                    simbacementt@gmail.com
+                    simbacement.co.ke@gmail.com
                 </a>
-                <a href="tel:011262478">
+                <a href="tel:0202044591">
                     <i class="fa-solid fa-phone"></i>
-                    011262478
+                    0202044591
                 </a>
                 <a href="#">
                     <i class="fa-sharp fa-solid fa-location-dot"></i>

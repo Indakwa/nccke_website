@@ -23,3 +23,16 @@ product.innerText = products[productNo].p_name;
 price.innerText = products[productNo].price;
 quantity.innerText = localStorage.getItem('qtty')
 total.innerText = (localStorage.getItem('qtty') * products[productNo].price).toLocaleString()
+
+//for auto filling the form
+const formProduct = document.getElementById('formProduct')
+const formQuantity = document.getElementById('formQuantity')
+const formTotal = document.getElementById('formTotal');
+
+formProduct.value = products[productNo].p_name;
+formQuantity.value = localStorage.getItem('qtty');
+formTotal.value = `Ksh.${(localStorage.getItem('qtty') * products[productNo].price).toLocaleString()}`;
+
+function showPaybill(){
+    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100438301900`)
+}

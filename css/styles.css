@@ -2565,4 +2565,68 @@ footer #copy {
     width: 60px;
     height: 60px;
   }
+  .selected {
+    display: flex;
+    flex-direction: column;
+  }
+  .selected .order-container {
+    width: 100%;
+    padding: 0.8rem;
+    padding-bottom: 2.5rem;
+    background: rgba(0, 0, 0, 0.0549019608);
+  }
+  .selected .order-container .order {
+    width: 98%;
+    margin: 0 auto;
+    padding: 0rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  .selected .order-container .order h3 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+  }
+  .selected .order-container .order .product, .selected .order-container .order .price, .selected .order-container .order .quantity, .selected .order-container .order .total {
+    display: flex;
+    margin-top: 0.6rem;
+  }
+  .selected .order-container .order .product .left, .selected .order-container .order .price .left, .selected .order-container .order .quantity .left, .selected .order-container .order .total .left {
+    border: 2px solid rgba(0, 0, 0, 0.646);
+    width: 40%;
+    border-right: none;
+    padding: 0.5rem 1rem;
+  }
+  .selected .order-container .order .product .left p, .selected .order-container .order .price .left p, .selected .order-container .order .quantity .left p, .selected .order-container .order .total .left p {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+  .selected .order-container .order .product .right, .selected .order-container .order .price .right, .selected .order-container .order .quantity .right, .selected .order-container .order .total .right {
+    width: 60%;
+    padding: 0.5rem 1rem;
+  }
+  .selected .order-container .order .product .right p, .selected .order-container .order .price .right p, .selected .order-container .order .quantity .right p, .selected .order-container .order .total .right p {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+  .selected .details {
+    width: 100%;
+  }
+  .selected .details form {
+    width: 95%;
+    padding: 4rem 0;
+  }
+  .selected .details form h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .selected .details form input {
+    width: 96%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .selected .details form #submit {
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
