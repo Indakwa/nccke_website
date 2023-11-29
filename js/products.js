@@ -32,3 +32,32 @@ function purchase(productID, productNo) {
 
   location.href = "buy.html";
 }
+
+  // Function to toggle the 'chosen' class and store in local storage
+function toggleChosen(element, priceNum) {
+    // Remove 'chosen' class from all price-box elements
+    const priceBoxes = document.querySelectorAll('.price-box');
+    priceBoxes.forEach(box => box.classList.remove('chosen'));
+
+    // Add 'chosen' class to the clicked element
+    element.classList.add('chosen');
+
+
+    // Store the real price in local storage
+    localStorage.setItem('priceNum', priceNum);
+}
+
+function purchase2(productID, productNo) {
+  var input = document.getElementById(productID);
+  var quantity = parseInt(input.value);
+
+  // Check if 'price' is present in local storage
+  if (localStorage.getItem('priceNum')) {
+    localStorage.setItem('qtty', quantity);
+    localStorage.setItem('pNo', productNo);
+
+    location.href = "buy.html";
+  } else {
+    alert("Please choose a price before purchasing.");
+  }
+}

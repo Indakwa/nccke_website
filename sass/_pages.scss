@@ -137,6 +137,141 @@
     }
 }
 
+.added-list{
+    border: 2px solid aqua;
+    background: #f2f2f2;
+    padding: 3rem;
+    min-height: 800px;
+
+    .added-container{
+        display: flex;
+        justify-content: space-between;
+        width: 70vw;
+        margin: 0 auto;
+
+        .added-box{
+            width: 30%;
+            background: rgba(255, 255, 255, 0.864);          
+            padding: 1rem;
+            font-family: $robo;
+
+            .imgDiv{
+                padding: 1rem 0;
+                width: 100%;
+                height: 300px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .added-name{
+                margin-bottom: .3rem;
+
+                .name{
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    color: $blue;
+                }
+
+                .price-range{
+                    font-size: 1.1rem;
+                }
+            }
+
+            .prices{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .price-box{
+                    width: 46%;
+                    border: 2px solid rgba(0, 0, 0, 0.231);
+                    margin-bottom: 1.5rem;
+                    padding: 1rem .6rem;
+
+                    .spec{
+                        font-size: 1rem;
+                        text-align: center;
+                    }
+
+                    .real-price{
+                        font-size: 1rem;
+                        text-align: center;
+                        color: $blue;
+                    }
+                }
+
+                .chosen{
+                    background: #2f34763c;
+                }
+            }
+
+            .lowerDiv{
+                margin-top: 1rem;
+
+                h6{
+                    font-family: $open;
+                    text-align: center;
+                    font-size: .8rem;
+                    margin-bottom: .5rem;
+                }
+
+                .inner{
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button{
+                        display: block;
+                        font-family: $robo;
+                        padding: .5rem 1rem;
+                        font-size: 1.5rem;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    input{
+                        display: block;
+                        text-align: center;
+                        width: 60px;
+                        font-size: 1.2rem;
+                        font-family: $robo;
+                        height: 50px;
+                    }
+
+                }
+
+                #buyBtn{
+                    border: none;
+                    outline: none;
+                    display: block;
+                    width: 60%;
+                    min-width: 150px;
+                    background: rgba(255, 0, 0, 0.802);
+                    color: white;
+                    margin: 0 auto;
+                    margin-top: 2rem;
+                    font-size: 1.3rem;
+                    font-family: $robo;
+                    padding: .5rem;
+                    transition: .5s ease;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 .about-hero{
     position: relative;
     min-height: 450px;

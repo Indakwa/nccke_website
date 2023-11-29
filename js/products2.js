@@ -11,6 +11,10 @@ const products = [
         p_name: "Paving Blocks",
         price: 250
     },
+    {
+        p_name: "Added Blpckss",
+        price: [100, 200, 300, 400]
+    },
 ]
 
 const product = document.getElementById('product')
@@ -18,11 +22,20 @@ const price = document.getElementById('price')
 const quantity = document.getElementById('quantity')
 const total = document.getElementById('total');
 const productNo = localStorage.getItem('pNo')
+const priceNum = localStorage.getItem('priceNum')
 
 product.innerText = products[productNo].p_name;
-price.innerText = products[productNo].price;
+if(Array.isArray(products[productNo].price)){
+    price.innerText = parseInt(products[productNo].price[priceNum]);
+    console.log("ARRRRRRAYYYY");
+}else{
+    price.innerText = products[productNo].price;
+    console.log("000000000000000000");
+}
+
 quantity.innerText = localStorage.getItem('qtty')
-total.innerText = (localStorage.getItem('qtty') * products[productNo].price).toLocaleString()
+//total.innerText = (localStorage.getItem('qtty') * products[productNo].price).toLocaleString()
+total.innerText = (localStorage.getItem('qtty') * price.innerText).toLocaleString()
 
 //for auto filling the form
 const formProduct = document.getElementById('formProduct')

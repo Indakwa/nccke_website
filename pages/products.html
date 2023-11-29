@@ -113,6 +113,47 @@
             </div>
         </div>
     </section>
+
+    <section class="added-list">
+        <div class="added-container">
+            <div class="added-box">
+                <div class="imgDiv">
+                    <img src="../images/bag.png" alt="">
+                </div>
+                <div class="added-name">
+                    <p class="name">Round Steel Bars</p>
+                    <p class="price-range">KSh 190.00 - Ksh 2705.00</p>
+                </div>
+                <div class="prices">
+                    <div class="price-box" onclick="toggleChosen(this, 0)">
+                        <p class="spec">R-6 MM</p>
+                        <p class="real-price">KSh 190.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 1)">
+                        <p class="spec">R-6 MM</p>
+                        <p class="real-price">KSh 190.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 2)">
+                        <p class="spec">R-6 MM</p>
+                        <p class="real-price">KSh 190.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 3)">
+                        <p class="spec">R-6 MM</p>
+                        <p class="real-price">KSh 190.00</p>
+                    </div>
+                </div>
+                <div id="added-product1" class="lowerDiv">
+                    <h6>Quantity</h6>
+                    <div class="inner">
+                        <button onclick="decreaseValue('added-input1')">-</button>
+                        <input type="text" id="added-input1" value="1">
+                        <button onclick="increaseValue('added-input1')">+</button>
+                    </div>
+                    <button id="buyBtn" onclick="purchase2('added-input1', 3)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
     <a href="https://wa.me/0202044591?text=Hello%20Simba%20Cement%20" id="toWhatsapp">
