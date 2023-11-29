@@ -729,7 +729,6 @@ footer #copy {
 }
 
 .added-list {
-  border: 2px solid aqua;
   background: #f2f2f2;
   padding: 3rem;
   min-height: 800px;
@@ -737,14 +736,17 @@ footer #copy {
 .added-list .added-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 70vw;
   margin: 0 auto;
 }
 .added-list .added-container .added-box {
   width: 30%;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.864);
   padding: 1rem;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 1.2rem;
 }
 .added-list .added-container .added-box .imgDiv {
   padding: 1rem 0;
@@ -775,8 +777,9 @@ footer #copy {
   flex-wrap: wrap;
 }
 .added-list .added-container .added-box .prices .price-box {
+  cursor: pointer;
   width: 46%;
-  border: 2px solid rgba(0, 0, 0, 0.231);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
   padding: 1rem 0.6rem;
 }
@@ -790,7 +793,7 @@ footer #copy {
   color: #2f3476;
 }
 .added-list .added-container .added-box .prices .chosen {
-  background: rgba(47, 52, 118, 0.2352941176);
+  background: rgba(47, 52, 118, 0.1137254902);
 }
 .added-list .added-container .added-box .lowerDiv {
   margin-top: 1rem;

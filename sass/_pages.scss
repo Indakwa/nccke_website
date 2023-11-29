@@ -138,7 +138,7 @@
 }
 
 .added-list{
-    border: 2px solid aqua;
+    
     background: #f2f2f2;
     padding: 3rem;
     min-height: 800px;
@@ -146,14 +146,17 @@
     .added-container{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 70vw;
         margin: 0 auto;
 
         .added-box{
             width: 30%;
+            min-width: 300px;
             background: rgba(255, 255, 255, 0.864);          
             padding: 1rem;
             font-family: $robo;
+            margin-bottom: 1.2rem;
 
             .imgDiv{
                 padding: 1rem 0;
@@ -188,8 +191,9 @@
                 flex-wrap: wrap;
 
                 .price-box{
+                    cursor: pointer;
                     width: 46%;
-                    border: 2px solid rgba(0, 0, 0, 0.231);
+                    border: 2px solid rgba(0, 0, 0, 0.1);
                     margin-bottom: 1.5rem;
                     padding: 1rem .6rem;
 
@@ -206,7 +210,7 @@
                 }
 
                 .chosen{
-                    background: #2f34763c;
+                    background: #2f34761d;
                 }
             }
 

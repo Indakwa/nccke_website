@@ -118,28 +118,44 @@
         <div class="added-container">
             <div class="added-box">
                 <div class="imgDiv">
-                    <img src="../images/bag.png" alt="">
+                    <img src="../images/wire.jpeg" alt="">
                 </div>
                 <div class="added-name">
-                    <p class="name">Round Steel Bars</p>
-                    <p class="price-range">KSh 190.00 - Ksh 2705.00</p>
+                    <p class="name">CHICKEN WIRE 30M</p>
+                    <p class="price-range">KSh 1350.00 - Ksh 3200.00</p>
                 </div>
                 <div class="prices">
                     <div class="price-box" onclick="toggleChosen(this, 0)">
-                        <p class="spec">R-6 MM</p>
-                        <p class="real-price">KSh 190.00</p>
+                        <p class="spec">3ft x 1'</p>
+                        <p class="real-price">KSh 1400.00</p>
                     </div>
                     <div class="price-box" onclick="toggleChosen(this, 1)">
-                        <p class="spec">R-6 MM</p>
-                        <p class="real-price">KSh 190.00</p>
+                        <p class="spec">3ft x 1/2'</p>
+                        <p class="real-price">KSh 1750.00</p>
                     </div>
                     <div class="price-box" onclick="toggleChosen(this, 2)">
-                        <p class="spec">R-6 MM</p>
-                        <p class="real-price">KSh 190.00</p>
+                        <p class="spec">3ft x 11/2'</p>
+                        <p class="real-price">KSh 1350.00</p>
                     </div>
                     <div class="price-box" onclick="toggleChosen(this, 3)">
-                        <p class="spec">R-6 MM</p>
-                        <p class="real-price">KSh 190.00</p>
+                        <p class="spec">3ft x 3/4'</p>
+                        <p class="real-price">KSh 1600.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 4)">
+                        <p class="spec">6ft x 1'</p>
+                        <p class="real-price">KSh 2400.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 5)">
+                        <p class="spec">6ft x 1/2'</p>
+                        <p class="real-price">KSh 3200.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 6)">
+                        <p class="spec">6ft x 11/2'</p>
+                        <p class="real-price">KSh 2400.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 7)">
+                        <p class="spec">6ft x 3/4'</p>
+                        <p class="real-price">KSh 2800.00</p>
                     </div>
                 </div>
                 <div id="added-product1" class="lowerDiv">
@@ -152,11 +168,85 @@
                     <button id="buyBtn" onclick="purchase2('added-input1', 3)">Buy Now</button>
                 </div>
             </div>
+
+            <div class="added-box">
+                <div class="imgDiv">
+                    <img src="../images/zed.jpeg" alt="">
+                </div>
+                <div class="added-name">
+                    <p class="name">ZED METAL BARS</p>
+                    <p class="price-range">KSh 850.00 - Ksh 1500.00</p>
+                </div>
+                <div class="prices">
+                    <div class="price-box" onclick="toggleChosen(this, 0)">
+                        <p class="spec">3/4' x 3MM</p>
+                        <p class="real-price">KSh 1500.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 1)">
+                        <p class="spec">1' x 1/8'</p>
+                        <p class="real-price">KSh 980.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 2)">
+                        <p class="spec">3/4' x 1/8'</p>
+                        <p class="real-price">KSh 850.00</p>
+                    </div>
+                </div>
+                <div id="added-product2" class="lowerDiv">
+                    <h6>Quantity</h6>
+                    <div class="inner">
+                        <button onclick="decreaseValue('added-input2')">-</button>
+                        <input type="text" id="added-input2" value="1">
+                        <button onclick="increaseValue('added-input2')">+</button>
+                    </div>
+                    <button id="buyBtn" onclick="purchase2('added-input2', 4)">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="added-box">
+                <div class="imgDiv">
+                    <img src="../images/round.jpeg" alt="">
+                </div>
+                <div class="added-name">
+                    <p class="name">ROUND STEEL BARS</p>
+                    <p class="price-range">KSh 190.00 - Ksh 2705.00</p>
+                </div>
+                <div class="prices">
+                    <div class="price-box" onclick="toggleChosen(this, 0)">
+                        <p class="spec">R-6 MM</p>
+                        <p class="real-price">KSh 190.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 1)">
+                        <p class="spec">R-8 MM</p>
+                        <p class="real-price">KSh 695.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 2)">
+                        <p class="spec">R-10 MM</p>
+                        <p class="real-price">KSh 1065.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 3)">
+                        <p class="spec">R-12 MM</p>
+                        <p class="real-price">KSh 1512.00</p>
+                    </div>
+                    <div class="price-box" onclick="toggleChosen(this, 4)">
+                        <p class="spec">R-16 MM</p>
+                        <p class="real-price">KSh 2705.00</p>
+                    </div>
+                </div>
+                <div id="added-product2" class="lowerDiv">
+                    <h6>Quantity</h6>
+                    <div class="inner">
+                        <button onclick="decreaseValue('added-input2')">-</button>
+                        <input type="text" id="added-input2" value="1">
+                        <button onclick="increaseValue('added-input2')">+</button>
+                    </div>
+                    <button id="buyBtn" onclick="purchase2('added-input2', 4)">Buy Now</button>
+                </div>
+            </div>
         </div>
     </section>
     
 
-    <a href="https://wa.me/0202044591?text=Hello%20Simba%20Cement%20" id="toWhatsapp">
+    <a href="https://wa.me/0202500326?text=Hello%20Simba%20Cement%20" id="toWhatsapp">
         <div class="imgDiv">
             <img src="../images/download.jpg" alt="">
         </div>
@@ -199,9 +289,9 @@
                     <i class="fa-solid fa-envelope"></i>
                     simbacement.co.ke@gmail.com
                 </a>
-                <a href="tel:0202044591">
+                <a href="tel:0202500326">
                     <i class="fa-solid fa-phone"></i>
-                    0202044591
+                    0202500326  
                 </a>
                 <a href="#">
                     <i class="fa-sharp fa-solid fa-location-dot"></i>

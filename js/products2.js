@@ -12,8 +12,16 @@ const products = [
         price: 250
     },
     {
-        p_name: "Added Blpckss",
-        price: [100, 200, 300, 400]
+        p_name: "CHICKEN WIRE 30M",
+        price: [1400, 1750, 1350, 1600, 2400, 3200, 2300, 2800]
+    },
+    {
+        p_name: "ZED METAL BARS",
+        price: [1500, 980, 850]
+    },
+    {
+        p_name: "ROUND STEEL BARS",
+        price: [190, 695, 1065, 1512, 2705]
     },
 ]
 
