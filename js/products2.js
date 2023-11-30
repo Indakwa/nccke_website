@@ -59,6 +59,26 @@ const products = [
         p_name: "ANGLE LINE STEEL BARS",
         price: [4250, 1100, 2920, 2000, 2400, 8000, 2150, 755, 2750]
     },
+    {
+        p_name: "ANGLE LINE STEEL BARS",
+        price: [4250, 1100, 2920, 2000, 2400, 8000, 2150, 755, 2750]
+    },
+    {
+        p_name: "3D Splendor Cabro Paving Blocks",
+        price: 960
+    },
+    {
+        p_name: "60mm Precast Paving Blocks",
+        price: 750
+    },
+    {
+        p_name: "A610 BRC MESH COMMERCIAL",
+        price: 6500
+    },
+    {
+        p_name: "A98 BRC MESH STANDARD",
+        price: 22500
+    },
 ]
 
 const product = document.getElementById('product')

@@ -650,6 +650,7 @@ footer #copy {
 .products-list .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 70vw;
   margin: 0 auto;
 }
@@ -658,6 +659,7 @@ footer #copy {
   background: rgba(255, 255, 255, 0.864);
   padding: 2rem;
   transition: 0.5s ease;
+  margin-bottom: 1.5rem;
 }
 .products-list .container .box .upperDiv .imgDiv {
   width: 100%;

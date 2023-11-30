@@ -275,7 +275,10 @@
         });
 
             // Set the offer end date and time in UTC format
-    const offerEnd = new Date(Date.UTC(2023, 4, 28, 23, 59, 59));
+    // Calculate the offer end date and time, 12 days from now
+    const offerEnd = new Date();
+    offerEnd.setDate(offerEnd.getDate() + 12);
+    offerEnd.setUTCHours(23, 59, 59);
 
     // Get the HTML elements for the timer display
     const daysEl = document.getElementById("days");
