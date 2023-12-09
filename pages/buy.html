@@ -26,6 +26,7 @@
                     <li><a href="news.html">News Room</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="ug.html">NCCL Uganda</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                 </ul>
             </nav>
             <button class="hamburger">
@@ -41,6 +42,7 @@
         <a href="news.html">News Room</a>
         <a href="contact.html">Contact Us</a>
         <a href="ug.html">NCCL Uganda</a>
+        <a href="cart.html">Cart</a>
 	</nav>
 
     <div class="selected">
@@ -49,26 +51,26 @@
                 <h3>Your Order Summary</h3>
                 <div class="product">
                     <div class="left">
-                        <p>Product</p>
+                        <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="product"></p>
+                        <p>KSh.<span id="subtotal"></span></p>
                     </div>
                 </div>
                 <div class="price">
                     <div class="left">
-                        <p>Price</p>
+                        <p>Delivery Fee</p>
                     </div>
                     <div class="right">
-                        <p>Ksh.<span id="price"></span>.00</p>
+                        <p>KSh.149.00</p>
                     </div>
                 </div>
                 <div class="quantity">
                     <div class="left">
-                        <p>Quantity</p>
+                        <p>Customs Fee</p>
                     </div>
                     <div class="right">
-                        <p id="quantity"></p>
+                        <p>KSh. 49.00</p>
                     </div>
                 </div>
                 <div class="total">
@@ -76,7 +78,7 @@
                         <p>Total Price</p>
                     </div>
                     <div class="right">
-                        <p>Ksh.<span id="total"></span>.00</p>
+                        <p>KSh.<span id="total"></span>.00</p>
                     </div>
                 </div>
             </div>
@@ -90,9 +92,9 @@
                 <h5>Enter your Details</h5>
                 <input type="text" name="name" required="true" placeholder="Enter your name">
                 <input type="tel" name="phone" required="true" placeholder="Enter your phone number">
+                <input type="email" name="email" required="true" placeholder="Enter your email">
                 <input type="text" name="town" required="true" placeholder="Enter your Town/City">
                 <input type="text" style="display: none;" name="product" id="formProduct">
-                <input type="text" style="display: none;" name="quantity" id="formQuantity">
                 <input type="text" style="display: none;" name="total" id="formTotal">
                 <input type="submit" id="submit" onclick="showPaybill()">
             </form>
@@ -158,6 +160,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/products2.js"></script>
+    <script src="../js/buy.js"></script>
 </body>
 </html>

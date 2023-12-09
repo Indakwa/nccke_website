@@ -81,31 +81,50 @@ const products = [
     },
 ]
 
-const product = document.getElementById('product')
-const price = document.getElementById('price')
-const quantity = document.getElementById('quantity')
-const total = document.getElementById('total');
-const productNo = localStorage.getItem('pNo')
-const priceNum = localStorage.getItem('priceNum')
-
-product.innerText = products[productNo].p_name;
-if(Array.isArray(products[productNo].price)){
-    price.innerText = parseInt(products[productNo].price[priceNum]);
-   // console.log("ARRRRRRAYYYY");
-}else{
-    price.innerText = products[productNo].price;
-    //console.log("000000000000000000");
-}
-
-quantity.innerText = localStorage.getItem('qtty')
-//total.innerText = (localStorage.getItem('qtty') * products[productNo].price).toLocaleString()
-total.innerText = (localStorage.getItem('qtty') * price.innerText).toLocaleString()
 
 
 
-formProduct.value = products[productNo].p_name;
-formTotal.value = `Ksh.${(localStorage.getItem('qtty') * products[productNo].price).toLocaleString()}`;
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve ncCart from localStorage
+    const ncCart = JSON.parse(localStorage.getItem('ncCart')) || [];
 
-function showPaybill(){
-    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100438301900`)
-}
+    // Array to store names of products in the cart
+    var productsInCart = [];
+
+    // Reference to the container where cart items will be appended
+    const cartContainer = document.getElementById('cart-container');
+
+    // Iterate over each item in ncCart
+    ncCart.forEach(item => {
+        // Find the corresponding product in the products array
+        const product = products[item.pNo]; // Assuming product numbers start from 1
+
+        // Add the product name to the array
+        if (product && product.p_name) {
+            productsInCart.push(product.p_name);
+        }
+
+        // ... rest of your code to create cart items
+    });
+
+    const subTotal = document.getElementById('subtotal');
+    const total = document.getElementById('total');
+
+    subTotal.innerText = localStorage.getItem('totalz')
+    total.innerText = parseInt(subTotal.innerText) + 149 + 49;
+
+
+
+    //for auto filling the form
+    const formProduct = document.getElementById('formProduct')
+    const formTotal = document.getElementById('formTotal')
+
+    formProduct.value = productsInCart.join(', ');
+    formTotal.value = `Ksh.${total.innerText}`;
+
+    //console.log(`Products: ${formProduct.value} \n Total: KSh.${formTotal.value}`)
+
+});
+
+
+
