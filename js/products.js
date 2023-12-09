@@ -30,7 +30,22 @@ function purchase(productID, productNo) {
   localStorage.setItem('qtty', quantity);
   localStorage.setItem('pNo', productNo)
 
-  location.href = "buy.html";
+      // Check if ncCart already exists in localStorage, if not, initialize it as an empty array
+      const ncCart = JSON.parse(localStorage.getItem('ncCart')) || [];
+
+      var input = document.getElementById(productID);
+      var quantity = parseInt(input.value);
+  
+      // Create an object with qqty and pNo properties
+      const cartItem = { qqty: quantity, pNo: productNo };
+  
+      // Push the object into the ncCart array
+      ncCart.push(cartItem);
+  
+      // Save the updated ncCart back to localStorage
+      localStorage.setItem('ncCart', JSON.stringify(ncCart));
+
+  location.href = "cart.html";
 }
 
   // Function to toggle the 'chosen' class and store in local storage
@@ -56,8 +71,73 @@ function purchase2(productID, productNo) {
     localStorage.setItem('qtty', quantity);
     localStorage.setItem('pNo', productNo);
 
-    location.href = "buy.html";
+
   } else {
     alert("Please choose a price before purchasing.");
   }
+
+    // Check if ncCart already exists in localStorage, if not, initialize it as an empty array
+    const ncCart = JSON.parse(localStorage.getItem('ncCart')) || [];
+
+    var input = document.getElementById(productID);
+    var quantity = parseInt(input.value);
+
+        // Check if 'price' is present in local storage
+    if (localStorage.getItem('priceNum')) {
+        // Create an object with qqty and pNo properties
+        const cartItem = { qqty: quantity, pNo: productNo };
+
+        // Push the object into the ncCart array
+        ncCart.push(cartItem);
+
+        // Save the updated ncCart back to localStorage
+        localStorage.setItem('ncCart', JSON.stringify(ncCart));
+    } else {
+        alert("Please choose a price before purchasing.");
+    }
+    location.href = "cart.html";
+}
+
+function addToCart(productID, productNo){
+    // Check if ncCart already exists in localStorage, if not, initialize it as an empty array
+    const ncCart = JSON.parse(localStorage.getItem('ncCart')) || [];
+
+    var input = document.getElementById(productID);
+    var quantity = parseInt(input.value);
+
+    // Create an object with qqty and pNo properties
+    const cartItem = { qqty: quantity, pNo: productNo };
+
+    // Push the object into the ncCart array
+    ncCart.push(cartItem);
+
+    // Save the updated ncCart back to localStorage
+    localStorage.setItem('ncCart', JSON.stringify(ncCart));
+    alert("Product added to Cart")
+}
+
+function addToCart2(productID, productNo){
+    // Check if ncCart already exists in localStorage, if not, initialize it as an empty array
+    const ncCart = JSON.parse(localStorage.getItem('ncCart')) || [];
+
+    var input = document.getElementById(productID);
+    var quantity = parseInt(input.value);
+
+        // Check if 'price' is present in local storage
+    if (localStorage.getItem('priceNum')) {
+        // Create an object with qqty and pNo properties
+        const cartItem = { qqty: quantity, pNo: productNo };
+
+        // Push the object into the ncCart array
+        ncCart.push(cartItem);
+
+        // Save the updated ncCart back to localStorage
+        localStorage.setItem('ncCart', JSON.stringify(ncCart));
+        alert("Product added to Cart")
+    } else {
+        alert("Please choose a price before Adding to Cart");
+    }
+
+
+
 }

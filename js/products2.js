@@ -91,10 +91,10 @@ const priceNum = localStorage.getItem('priceNum')
 product.innerText = products[productNo].p_name;
 if(Array.isArray(products[productNo].price)){
     price.innerText = parseInt(products[productNo].price[priceNum]);
-    console.log("ARRRRRRAYYYY");
+   // console.log("ARRRRRRAYYYY");
 }else{
     price.innerText = products[productNo].price;
-    console.log("000000000000000000");
+    //console.log("000000000000000000");
 }
 
 quantity.innerText = localStorage.getItem('qtty')
