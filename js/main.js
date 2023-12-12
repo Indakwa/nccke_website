@@ -13,3 +13,8 @@ window.onload = function () {
 		mobile_menu.classList.toggle('is-active');
 	});
 }
+
+function refreshSite(){
+	localStorage.clear();
+	window.location.href = "/index.html";
+}

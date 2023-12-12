@@ -127,4 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function showPaybill(){
+    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100438301900`)
 
+    //localStorage.clear();
+}

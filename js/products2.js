@@ -103,9 +103,6 @@ total.innerText = (localStorage.getItem('qtty') * price.innerText).toLocaleStrin
 
 
 
-formProduct.value = products[productNo].p_name;
-formTotal.value = `Ksh.${(localStorage.getItem('qtty') * products[productNo].price).toLocaleString()}`;
+// formProduct.value = products[productNo].p_name;
+// formTotal.value = `Ksh.${(localStorage.getItem('qtty') * products[productNo].price).toLocaleString()}`;
 
-function showPaybill(){
-    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100438301900`)
-}

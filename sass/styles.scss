@@ -44,7 +44,7 @@ header{
     
         
         nav{
-            width: 65%;
+            width: 70%;
             display: flex;
             justify-content: end;
             align-items: center;
@@ -133,6 +133,10 @@ footer{
                 display: block;
                 margin-bottom: 1rem;
                 text-decoration: none;
+            }
+
+            #refresh{
+                cursor: pointer;
             }
         }
     }
