@@ -1,11 +1,11 @@
 const products = [
     {
         p_name: "Simba Cement 32.5R",
-        price: 480
+        price: 605
     },
     {
         p_name: "Simba Power 42.5N",
-        price: 570
+        price: 940
     },
     {
         p_name: "Paving Blocks",
