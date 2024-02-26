@@ -1,12 +1,12 @@
 const products = [
     {
         p_name: "Simba Cement 32.5R",
-        price: 480,
+        price: 605,
         src: '../images/bag.png',
     },
     {
         p_name: "Simba Power 42.5N",
-        price: 570,
+        price: 940,
         src: '../images/bag2.png',
     },
     {
