@@ -99,6 +99,7 @@ function purchase2(productID, productNo) {
         localStorage.setItem('ncCart', JSON.stringify(ncCart));
     } else {
         alert("Please choose a price before purchasing.");
+        return;
     }
     location.href = "cart.html";
 }
