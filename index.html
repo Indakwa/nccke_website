@@ -294,31 +294,36 @@
     // Update the countdown every second
     const countdown = setInterval(updateCountdown, 1000);
 
-    function updateCountdown() {
-    // Get the current date and time in UTC format
-    const now = new Date();
+        function updateCountdown() {
+            // Calculate the offer end date and time, 12 days from now
+            const offerEnd = new Date();
+            offerEnd.setDate(offerEnd.getDate() + 12);
+            offerEnd.setUTCHours(23, 59, 59);
 
-    // Calculate the remaining time in milliseconds
-    const remainingTime = offerEnd - now;
+            // Get the current date and time in UTC format
+            const now = new Date();
 
-    // If the offer has ended, stop the countdown
-    if (remainingTime < 0) {
-        clearInterval(countdown);
-        return;
-    }
+            // Calculate the remaining time in milliseconds
+            const remainingTime = offerEnd - now;
 
-    // Calculate the remaining time in days, hours, minutes, and seconds
-    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            // If the offer has ended, stop the countdown
+            if (remainingTime < 0) {
+                clearInterval(countdown);
+                return;
+            }
 
-    // Update the timer display with the remaining time
-    daysEl.textContent = days.toString().padStart(2, "0");
-    hoursEl.textContent = hours.toString().padStart(2, "0");
-    minutesEl.textContent = minutes.toString().padStart(2, "0");
-    secondsEl.textContent = seconds.toString().padStart(2, "0");
-    }
+            // Calculate the remaining time in days, hours, minutes, and seconds
+            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+            // Update the timer display with the remaining time
+            daysEl.textContent = days.toString().padStart(2, "0");
+            hoursEl.textContent = hours.toString().padStart(2, "0");
+            minutesEl.textContent = minutes.toString().padStart(2, "0");
+            secondsEl.textContent = seconds.toString().padStart(2, "0");
+        }
 
     </script>
     <script src="js/main.js"></script>
