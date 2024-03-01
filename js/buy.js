@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function showPaybill(){
-    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100445012800`)
+    alert(`Please use these details to pay \n PAYBILL: 329329 \n ACCOUNT NUMBER: 0100445022600`)
 
     //localStorage.clear();
 }
