@@ -283,52 +283,41 @@
         });
         });
 
-            // Set the offer end date and time in UTC format
-    // Calculate the offer end date and time, 12 days from now
-    const offerEnd = new Date();
-    offerEnd.setDate(offerEnd.getDate() + 12);
-    offerEnd.setUTCHours(23, 59, 59);
+        function updateTimer() {
+  var now = new Date();
+  var endDate;
 
-    // Get the HTML elements for the timer display
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minutesEl = document.getElementById("minutes");
-    const secondsEl = document.getElementById("seconds");
+  if (now.getDate() < 10) {
+    endDate = new Date(now.getFullYear(), now.getMonth(), 10); // Set the end date to the 10th day of the current month
+  } else {
+    endDate = new Date(now.getFullYear(), now.getMonth() + 1, 10); // Set the end date to the 10th day of the next month
+  }
 
-    // Update the countdown every second
-    const countdown = setInterval(updateCountdown, 1000);
+  var timeLeft = endDate - now;
 
-        function updateCountdown() {
-            // Calculate the offer end date and time, 12 days from now
-            const offerEnd = new Date();
-            offerEnd.setDate(offerEnd.getDate() + 12);
-            offerEnd.setUTCHours(23, 59, 59);
+  if (timeLeft <= 0) {
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    return; // Stop the countdown if the end date has passed
+  }
 
-            // Get the current date and time in UTC format
-            const now = new Date();
+  var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            // Calculate the remaining time in milliseconds
-            const remainingTime = offerEnd - now;
+  document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+  document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+  document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+  document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+}
 
-            // If the offer has ended, stop the countdown
-            if (remainingTime < 0) {
-                clearInterval(countdown);
-                return;
-            }
+updateTimer(); // Initial call to update timer
 
-            // Calculate the remaining time in days, hours, minutes, and seconds
-            const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-            // Update the timer display with the remaining time
-            daysEl.textContent = days.toString().padStart(2, "0");
-            hoursEl.textContent = hours.toString().padStart(2, "0");
-            minutesEl.textContent = minutes.toString().padStart(2, "0");
-            secondsEl.textContent = seconds.toString().padStart(2, "0");
-        }
-
+// Update timer every second
+setInterval(updateTimer, 1000);
     </script>
     <script src="js/main.js"></script>
 
